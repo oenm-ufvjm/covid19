@@ -2,25 +2,25 @@ Este observatório é um projeto pesquisa-extensão vinculado a Universidade Fed
 
 # Equipe Janaúba
 
-Fabiano Alan Serafim Ferrari
-Rogério Alves Santana 
-Patricia Nirlane da Costa Souza
-Silas Silva Santana
-Roberto Allan Ribeiro Silva
-Fernanda Guerra Lima Medeiros Borsagli
-Hudson Vinicius Tavares Mineiro
-Alisson Iuri Alves da Silva
-Ana Flávia Santos da Costa
-Keren Judith Brito de Almeida
-João Victor da Silva Barbosa
+<p> Fabiano Alan Serafim Ferrari </p>
+<p> Rogério Alves Santana </p>
+<p> Patricia Nirlane da Costa Souza </p>
+<p> Silas Silva Santana </p>
+<p> Roberto Allan Ribeiro Silva </p>
+<p> Fernanda Guerra Lima Medeiros Borsagli </p>
+<p> Hudson Vinicius Tavares Mineiro </p>
+<p> Alisson Iuri Alves da Silva </p>
+<p> Ana Flávia Santos da Costa </p>
+<p> Keren Judith Brito de Almeida </p>
+<p> João Victor da Silva Barbosa </p>
 
 # Equipe Diamantina
 
-Ana Paula Nogueira Nunes
-Geovane da Conceição Máximo
+<p> Ana Paula Nogueira Nunes </p>
+<p> Geovane da Conceição Máximo </p>
 
 # Colaboradores Externos
 
-Rafael Soares Paixão
-Thiago de Lima Prado
+<p> Rafael Soares Paixão </p>
+<p> Thiago de Lima Prado </p>
 
