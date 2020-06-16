@@ -26,9 +26,6 @@
 
 Seja bem-vindo ao nosso observatório. Aqui você terá acesso a informações sobre a propagação do coronavírus no Norte de Minas. 
 
-teste. 
-
-
  <div class="vertical-menu">
   <a href="#" class="active">Home</a>
   <a href="#">Link 1</a>
