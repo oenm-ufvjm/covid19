@@ -9,20 +9,20 @@
 </head>
 <body>
   
-  teste3
+  teste4
 
   <div id="map"></div>
 
   <script>
 
- var mymap = L.map('map').setView([-15.6310, -43.4441], 9);
+ var mymap = L.map('map').setView([-15.6310, -43.3122], 9);
     
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
-    L.marker([-15.6310, -43.4441]).addTo(mymap).bindPopup('UFVJM - Campus de Janaúba').openPopup();
+    L.marker([-15.8062, -43.4441]).addTo(mymap).bindPopup('UFVJM - Campus de Janaúba').openPopup();
            
     var circle = L.circle([-15.6310, -43.4441], {
     color: 'red',
