@@ -2,6 +2,7 @@
 
 Seja bem-vindo ao nosso observatório. Aqui você terá acesso a informações sobre a propagação do coronavírus no Norte de Minas. 
 
+<body>
  <div class="vertical-menu">
   <a href="#" class="active">Home</a>
   <a href="#">Link 1</a>
@@ -9,4 +10,4 @@ Seja bem-vindo ao nosso observatório. Aqui você terá acesso a informações s
   <a href="#">Link 3</a>
   <a href="#">Link 4</a>
 </div> 
-
+</body>
