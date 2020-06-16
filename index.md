@@ -21,10 +21,7 @@
 }
 </style>
 
-
-## Observatório COVID-19 Norte de Minas
-
-Seja bem-vindo ao nosso observatório. Aqui você terá acesso a informações sobre a propagação do coronavírus no Norte de Minas. 
+<html>
 
  <div class="vertical-menu">
   <a href="#" class="active">Home</a>
@@ -34,3 +31,10 @@ Seja bem-vindo ao nosso observatório. Aqui você terá acesso a informações s
   <a href="#">Link 4</a>
 </div> 
 
+## Observatório COVID-19 Norte de Minas
+
+Seja bem-vindo ao nosso observatório. Aqui você terá acesso a informações sobre a propagação do coronavírus no Norte de Minas. 
+
+
+
+</html>
