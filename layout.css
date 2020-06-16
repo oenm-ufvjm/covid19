@@ -120,5 +120,5 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:normal; 
     margin-bottom: none;
     margin-left: none;
 }
-#footer, #footer a{color:#1E1E1E; background-color:#FFFFFF;}
+#footer, #footer a{color:#1E1E1E; background-color:#FFFFFF;text-align: center;}
 #footer p{margin:0; padding:20px 0;}
