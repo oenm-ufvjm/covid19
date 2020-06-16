@@ -15,13 +15,23 @@
 
   <script>
 
- var mymap = L.map('map').setView([-16.2595, -43.6610], 9);
+ var mymap = L.map('map').setView([-15.6310, -43.4441], 9);
     
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
+    L.marker([-15.6310, -43.4441]).addTo(mymap).bindPopup('UFVJM - Campus de Janaúba').openPopup();
+           
+    var circle = L.circle([-15.6310, -43.4441], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(mymap);
+    
+    
   </script>
 </body>
 </html>
