@@ -1,20 +1,69 @@
 <html lang="en" dir="ltr">
 <head>
 
-  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
   
 <title>Observatório COVID-19 Norte de Minas </title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="WebPage/layout.css" type="text/css">
 <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
   
-  <link rel="stylesheet" href="WebPage/leaflet.css"/>  
-   
-  <script src="WebPage/leaflet.js"></script>
-  <script src="WebPage/leaflet-heat.js"></script>
-  
+    
+
+   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+
+    <script src="WebPage/leaflet-heat.js"></script>
+    
    <style>
-        #map{width: 620px; height: 400px;}
+     #map{width: 620px; height: 400px;}
+     #map2{width: 620px; height: 400px;}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+
+
+/* Style the sidenav links and the dropdown button */
+
+ .sidenav a, .dropdown-btn {
+     font-family: "Lato", sans-serif;
+     padding: 6px 8px 6px 16px;
+     text-decoration: none;
+     font-size: 20px;
+     color: #0065a2;
+     display: block;
+     border: none;
+     background: none;
+     width: 100%;
+     text-align: left;
+     cursor: pointer;
+     outline: none;
+}
+
+/* On mouse-over */
+
+     .sidenav a:hover, .dropdown-btn:hover {
+     color: #a3d869;
+     }
+
+/* Add an active class to the active dropdown button */
+
+     .active {
+     background-color: #a3d869;
+     color: white;
+     }
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+
+     .dropdown-container {
+     display: none;
+     background-color: #FFFFFF;
+     padding-left: 8px;
+     }
+
+     
     </style>  
   
 </head>
@@ -39,15 +88,43 @@
   <!-- content body -->
   <aside id="left_column">
    <!-- <h2 class="title">Categories</h2> -->
-    <nav>
-      <ul>
-        <li><a href="analise"> Análise da Epidemia </a></li>
-        <li><a href="boletim"> Boletins Epidemiológicos </a></li>
-        <li><a href="acoes"> Nossas Ações </a></li>
-         <li class="last"><li><a href="artigos"> Artigos Recomendados</a></li>
-      </ul>
-    </nav>
-    
+
+
+   <div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+  <button class="dropdown-btn">Dropdown 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+  <a href="#contact">Search</a>
+</div>
+
+
+<script>
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+   
   </aside>
   <!-- main content -->
   <div id="content">
@@ -58,36 +135,41 @@
         <h2><a>Apresentação</a></h2>
         <p>Este é um projeto de pesquisa e extensão vinculado à Universidade Federal dos Vales do Jeqtuinhonha e Mucuri. Nosso objetivo é estudar a evolução da COVID-19, especialmente na região centro-norte de Minas Gerais. </p>
        </article>
-
-      <article>
-	<h2><a> Ação Solidária </a></h2>
-	
-	<p> Professores da UFVJM campus Janaúba fazem vaquinha e distribuem protetores faciais para EPI em diversas cidades.</p>
-
-	<div id="center">
-	  <video width="640" height="480" controls>
-	   < <source src="Acoes/VID-20200617-WA0045.mp4" type="video/mp4">
->
-</video>
-
-	  <p></p>
-</div>
-</article>
-
       <!-- article 2 -->
       <article>
-        <h2><a>Propagação do Coronavírus em Janaúba</a></h2>
-        <p> Mapa em escala de cores da dispersão dos casos de coronavírus em Janaúba. </p>
+        <h2><a>Região Centro-Norte de Minas Gerais</a></h2>
+        <p> Vamos estudar a propagação do coronavírus nas quatro mesoregiões: Norte de Minas, Noroeste de Minas, Jequitinhonha e Vale do Mucuri. </p>
   
             </article>
          
        
-      <div id="map"></div>
-       
+       <div id="map"></div>
 
        <script>      
      
-      var mymap = L.map('map').setView([-15.8075, -43.3077], 13);
+        var mymap = L.map('map').setView([-16.2595, -43.6610], 9);
+    
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(mymap);
+
+
+       </script>
+
+       	<article>
+	  <p> Teste </p>
+	</article>
+
+
+	<div id="map2"></div>
+
+
+   
+	
+<script>
+
+   var mymap2 = L.map('map2').setView([-15.8075, -43.3077], 13);
    var addressPoints = [
       [-15.8075, -43.3077],
       [-15.8075, -43.3077],
@@ -266,7 +348,7 @@
 
 var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(mymap);
+}).addTo(mymap2);
 
 addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
 
@@ -275,15 +357,23 @@ addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
         radius : 25, // default value
         blur : 15, // default value
         gradient : {0.2:'blue',0.5: 'lime', 0.8: 'yellow', 1.0: 'red'} // Values can be set for a scale of 0-1
-    }).addTo(mymap);
+    }).addTo(mymap2);
 
-       </script>
-       </div>
+</script>
+     
+  
+     
+
+  </div>
+
+
+    
           <!-- / content body -->
   <div class="clear"></div>     
  
   
 </div>
+
 <!-- footer -->
 <footer id="footer">
   <p class="fl_left"> OBSERVATÓRIO COVID-19 NORTE DE MINAS </p>
