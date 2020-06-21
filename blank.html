@@ -1,0 +1,11 @@
+  <script>      
+     
+        var mymap2 = L.map('map2').setView([-15.8075, -43.3077], 13);
+    
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(mymap2);
+
+ var heat = L.heatLayer([-15.8075, -43.3077], { radius: 5000}).addTo(mymap2);
+	
+       </script>  
