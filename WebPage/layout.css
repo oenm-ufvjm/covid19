@@ -88,6 +88,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:normal; 
 #container #content{float:right; width:588px;}
 
 #container #content section #center{text-align:center;}
+#container #content section #justify{text-align: justify;text-justify: inter-word;}
   
 #container #content section article{}
 #container #content section article h2{text-transform:uppercase;}
