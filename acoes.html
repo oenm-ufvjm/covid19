@@ -1,8 +1,7 @@
 <html lang="en" dir="ltr">
 <head>
 
-  
-  
+    
 <title>Observatório COVID-19 Norte de Minas </title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="WebPage/layout.css" type="text/css">
@@ -11,6 +10,14 @@
   <link rel="stylesheet" href="WebPage/leaflet.css"/>  
    
   <script src="leaflet.js"></script>
+
+  <style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
   
    <style>
         #map{width: 620px; height: 400px;}
@@ -25,10 +32,10 @@
   </div>
   <nav>
     <ul>
-      <li><a href="news"> Notícias </a></li>
-       <li><a href="parceiros"> Parceiros </a></li>
-      <li><a href="about"> Quem Somos </a></li>
-       <li class="last"><li><a href="contato"> Contato </a></li>      
+      <li><a href="news" style="font-size:150%"> Notícias </a></li>
+       <li><a href="parceiros" style="font-size:150%"> Parceiros </a></li>
+      <li><a href="about" style="font-size:150%"> Quem Somos </a></li>
+       <li class="last"><li><a href="contato" style="font-size:150%"> Contato </a></li>      
     </ul>
   </nav>
   <div class="clear"></div>
@@ -40,10 +47,10 @@
    <!-- <h2 class="title">Categories</h2> -->
     <nav>
       <ul>
-        <li><a href="analise"> Análise da Epidemia </a></li>
-        <li><a href="boletim"> Boletins Epidemiológicos </a></li>
-        <li><a href="acoes"> Nossas Ações </a></li>
-         <li class="last"><li><a href="artigos"> Artigos Recomendados</a></li>
+        <li><a href="analise" style="font-size:150%"> Análise da Epidemia </a></li>
+        <li><a href="boletim" style="font-size:150%"> Boletins Epidemiológicos </a></li>
+        <li><a href="acoes" style="font-size:150%"> Nossas Ações </a></li>
+         <li class="last"><li><a href="artigos" style="font-size:150%"> Artigos Recomendados</a></li>
       </ul>
     </nav>
     
@@ -53,11 +60,46 @@
     <!-- section 1 -->
     <section>
       <!-- article 1 -->
+
       <article>
-        <h2><a> Nossas Ações  </a></h2>
-        <p> Em construção. </p>
+        <h2 style="font-size:150%"><a>UFVJM Lança Cursos Sobre a COVID-19</a></h2>
+	<div id="justify">
+	<p style="font-size:150%"> Dentre os diversos cursos ofertados pela UFVJM, segue a relação de cursos relacionados com o observatório COVID-19 Norte de Minas selecionamos alguns:</p>
+</div>
+<div id="center">	
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="Figures/course1.jpg" style="width:75%" >
+  <img class="mySlides" src="Figures/course2.jpg" style="width:75%">
+  <img class="mySlides" src="Figures/course3.jpg" style="width:75%">
+  <img class="mySlides" src="Figures/course4.jpg" style="width:75%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</div>
+
        </article>
-    
+         
        </div>
           <!-- / content body -->
   <div class="clear"></div>     
