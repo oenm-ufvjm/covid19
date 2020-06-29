@@ -1,8 +1,6 @@
 <html lang="en" dir="ltr">
 <head>
 
-  
-  
 <title>Observatório COVID-19 Norte de Minas </title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="WebPage/layout.css" type="text/css">
@@ -13,6 +11,14 @@
   <script src="WebPage/leaflet.js"></script>
 
   <script src="WebPage/leaflet-heat.js"></script>
+
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
   
   <style>
 
@@ -57,7 +63,31 @@
       </ul>
     </nav>
 
+   <script>
+        var links = ["index.html","index.html","index.html","index.html"];
+        var images = ["Figures/course1.jpg","Figures/course2.jpg","Figures/course3.jpg","Figures/course4.jpg"];
+		
+        var i = 0;
+        var renew = setInterval(function(){
+            if(links.length == i){
+                i = 0;
+            }
+            else {
+            document.getElementById("bannerImage").src = images[i]; 
+            document.getElementById("bannerLink").href = links[i]; 
+            i++;
 
+        }
+        },2500);
+        </script>
+
+
+
+   <a id="bannerLink" href="index.html" onclick="void window.open(this.href); return false;">
+   
+<img id="bannerImage" src="Figures/course1.jpg" style="width:75%" alt="Cursos Online da UFVJM">
+</a>
+    
 <div class="bottomleft">
   
   <!-- Start of WebFreeCounter Code -->
@@ -74,8 +104,42 @@
     <section>
       <!-- article 1 -->
       <article>
-        <h2><a>Apresentação</a></h2>
-        <p>Este é um projeto de pesquisa e extensão vinculado à Universidade Federal dos Vales do Jeqtuinhonha e Mucuri. Nosso objetivo é estudar a evolução da COVID-19, especialmente na região centro-norte de Minas Gerais. </p>
+        <h2><a>UFVJM Lança Cursos Sobre a COVID-19</a></h2>
+
+	<p> Dentre os diversos cursos ofertados pela UFVJM selecionamos alguns:</p>
+
+<div id="center">	
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="Figures/course1.jpg" style="width:75%" >
+  <img class="mySlides" src="Figures/course2.jpg" style="width:75%">
+  <img class="mySlides" src="Figures/course3.jpg" style="width:75%">
+  <img class="mySlides" src="Figures/course4.jpg" style="width:75%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</div>
+
        </article>
 
       <article>
