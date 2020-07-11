@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="WebPage/leaflet.css"/>  
    
   <script src="WebPage/leaflet.js"></script>
+<<<<<<< HEAD
 
   <script src="WebPage/leaflet-heat.js"></script>
   
@@ -23,6 +24,10 @@
   font-size: 18px;
     }
     
+=======
+  
+   <style>
+>>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
         #map{width: 620px; height: 400px;}
     </style>  
   
@@ -56,6 +61,7 @@
          <li class="last"><li><a href="artigos"> Artigos Recomendados</a></li>
       </ul>
     </nav>
+<<<<<<< HEAD
 
 
 <div class="bottomleft">
@@ -66,6 +72,8 @@
   <p></p><p></p>
 
     </div>
+=======
+>>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
     
   </aside>
   <!-- main content -->
@@ -95,12 +103,18 @@
 
       <!-- article 2 -->
       <article>
+<<<<<<< HEAD
         <h2><a>Propagação do Coronavírus em Janaúba</a></h2>
         <p> Mapa em escala de cores  da dispersão dos casos confirmados de coronavírus em Janaúba por bairro. </p>
+=======
+        <h2><a>Região Centro-Norte de Minas Gerais</a></h2>
+        <p> Vamos estudar a propagação do coronavírus nas quatro mesoregiões: Norte de Minas, Noroeste de Minas, Jequitinhonha e Vale do Mucuri. </p>
+>>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
   
             </article>
          
        
+<<<<<<< HEAD
       <div id="map"></div>
       
       <p> Cores: azul - poucos casos; vermelho - muitos casos. Atualizado em 21/06/2020 com dados da Secretaria Municipal de Saúde.  </p>
@@ -299,6 +313,18 @@ addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
         gradient : {0.2:'blue',0.5: 'lime', 0.8: 'yellow', 1.0: 'red'} // Values can be set for a scale of 0-1
     }).addTo(mymap);
 
+=======
+       <div id="map"></div>
+       <script>      
+     
+        var mymap = L.map('map').setView([-16.2595, -43.6610], 9);
+    
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(mymap);
+          
+>>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
        </script>
        </div>
           <!-- / content body -->
