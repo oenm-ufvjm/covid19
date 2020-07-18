@@ -138,7 +138,18 @@ li a{
 
 }
 
+ <script>
+    window.onmessage = (e) => {
+      if (e.data.hasOwnProperty("frameHeight")) {
+        document.getElementById("iframe").style.height = `${e.data.frameHeight + 30}px`;
+      }
+    };
+
+    </script>
+
 </style>
+
+
 </head>
 
 <body>
@@ -190,14 +201,24 @@ li a{
   </div>
   
   <div class="column middle">
+    
+   <iframe src="Acao/acao_1.html" id="iframe" width="100%" height="640" frameborder="0">
+     <p>Your browser does not support iframes.</p>
+</iframe>
 
+   <iframe src="Mapa/MapaJanauba.html" id="iframe" width="100%" height="580" frameborder="0">
+     <p>Your browser does not support iframes.</p>
+</iframe>
    
-
+   
+    
   </div>
   
   <div class="column side">
   
-
+ <iframe src="Cursos/cursos.html" id="iframe" width="100%" height="520" frameborder="0">
+     <p>Your browser does not support iframes.</p>
+</iframe>
 
 <p>Visitante nº:</p>
   <a href="https://www.webfreecounter.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=gmuapxcx&nd=6&style=3" border="0" alt="visitor counter"></a>
