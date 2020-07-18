@@ -1,0 +1,39 @@
+  <div style=text-align:center>
+<h2><a>Cursos Online Grátis Sobre a COVID-19</a></h2>
+  </div>
+  
+  <div style="text-align: justify;text-justify: inter-word;">
+	<p> Dentre os diversos cursos ofertados pela UFVJM, segue a relação de cursos relacionados com o observatório COVID-19 Norte de Minas:</p>
+  </div>
+
+  <div style="text-align: center;">
+    
+  <img class="mySlides" src="course1.jpg" style="width:50%;margin: auto;" >
+  <img class="mySlides" src="course2.jpg" style="width:50%;margin: auto;">
+  <img class="mySlides" src="course3.jpg" style="width:50%;margin: auto;">
+  <img class="mySlides" src="course4.jpg" style="width:50%;margin: auto;">
+
+  <button onclick="plusDivs(-1)">&#10094;</button>
+  <button onclick="plusDivs(1)">&#10095;</button>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+  </div>
+ 
