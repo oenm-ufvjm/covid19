@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Observatório Covid-19 UFVJM</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" href="Leaflet/leaflet.css"/>  
+   
+  <script src="Leaflet/leaflet.js"></script>
+
+  <script src="Leaflet/leaflet-heat.js"></script>
+
+<style>
+
+ #map{width: 620px; height: 400px;}
+  
+.justify{
+  text-align: justify;
+  text-justify: inter-word;
+}
+  
+    .centering {
+    text-align: center;
+    
+ }
+
+  
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+
+background: linear-gradient(to right, #a3d869,#a3d869 , #a3d869);
+color: #fff;
+text-align: center;
+ padding: 10px;
+<!--margin: 1em 0;-->
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+
+  padding: 5px;
+  overflow: hidden;
+  background-color: #0065a2;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+width: 50%;
+
+
+#center{text-align:center;}
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+/* Style the footer */
+.footer {
+  background-color: #cccccc;
+  padding: 10px;
+  text-align: center;
+}
+
+ul {
+list-style-type: none;
+  margin: 0;
+padding: 0;
+background-color: #a3d869;
+
+overflow: hidden;
+}
+
+li {
+
+display: inline;
+
+float:top;
+float:right;
+}
+
+
+li a{
+
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size:20px;
+
+}
+
+ <script>
+    window.onmessage = (e) => {
+      if (e.data.hasOwnProperty("frameHeight")) {
+        document.getElementById("iframe").style.height = `${e.data.frameHeight + 30}px`;
+      }
+    };
+
+ </script>
+ 
+
+ ul.bottom1{
+ background-color: #0065a2;
+ list-style-type: none;
+  margin: 0;
+padding: 0;
+overflow: hidden;
+ }
+ 
+ li.bottom
+ {
+ float:left;
+ background-color: #0065a2;
+  display: block;
+ }
+
+ 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.bottom:hover .dropdown-content {
+ display: block;
+
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+  <div class="header">
+
+<ul>
+   <li><a href="#contact">Contato</a></li>
+  <li><a href="about.html">Quem Somos</a></li>
+   <li><a href="#home">Parcerias</a></li\>
+ </ul>
+
+<div style="top: 50%; left: 50%; transform: translate(0%, -20%);">
+  <h1>Observatório COVID-19 UFVJM</h1>
+</div>
+
+
+  
+</div>
+
+<ul  class="bottom1" style=" background-color: #0065a2;">
+  <li class="bottom"><a href="news.html">Notícias</a></li>
+  <li class="bottom"><a href="#news">Análises</a></li>
+   <li class="bottom"><a href="#home">Projetos</a></li>
+  <li class="bottom"><a href="#news">Artigos</a></li>
+  <li class="bottom">
+    <a href="boletim.html">Boletins Epidemiológicos</a>
+    <div class="dropdown-content">
+      <a href="boletim.html">CTCM - UFVJM - TO</a>
+      <a href="boletim.html">SES MG - Macrorregião Norte </a>
+     </div>
+  </li>
+<li class="bottom">
+    <a href="#cursos">Cursos</a>
+    <div class="dropdown-content">
+      <a href="https://projetoufvjmjanaub.wixsite.com/meusite/a-ci%C3%AAncia-por-tr%C3%A1s-do-combate-1">COVID-19: A ciência por trás do combate ao Coronavírus</a>
+      <a href="https://www.brasilagricola.com/">Prevenção ao coronavírus no meio rural </a>
+      <a href="#">Capacitação de farmacêuticos para enfrentamento do coronavírus em Diamantina e distritos</a>
+      <a href="https://www.instagram.com/mat.covid19/?hl=pt-br"> A Matemática por trás da Covid-19 </a>
+      <a href="">Covid-19: Abordagem interdisciplinar dos ciclos de vida nos níveis de atenção à saúde  </a>
+      <a href="https://projetoufvjmjanaub.wixsite.com/meusite/as-ferramentas-da-ci%C3%AAncia"> AS FERRAMENTAS DA CIÊNCIA NO DIAGNÓSTICO RÁPIDO E PRECISO DO COVID 19</a>
+      <a href="https://www.youtube.com/channel/UCuaL5y1hmU3CeBy2-8_tVHg">Projeto Sempre Viva: o que você precisa saber sobre a Covid-19 </a>
+      <a href="https://projetoufvjmjanaub.wixsite.com/meusite/conhecendo-para-se-prevenir-1">Covid- 19: Conhecendo para se prevenir  </a>
+      <a href="https://www.youtube.com/channel/UCuolhSSiiCsHz0yx_kUk13w?view_as=subscriber"> AgrON-Line - UFVJM: difusão de conhecimentos no combate ao Coronavírus (COVID-19) para os Agricultores Familiares do Vale do Jequitinhonha  </a>
+    </div>
+  </li>
+  
+</ul>
+
+<div class="row">
+  <div class="column side">
+
+<div class="centering">
+      <h1><a href="index.html"><img src="Images/Covid19Logo.jpg" alt="Logo" width="200"></a></h1>
+</div>
+
+<h2>Covid-19 na Região da UFVJM</h2>
+
+<div class="centering">
+
+      <iframe src="https://www.nonlinearsolutions.com.br/table.html" width="250px" height="250px" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+   
+    </div>
+    
+  </div>
+  
+  <div class="column middle">
+    
+   <iframe src="Acao/acao_1.html" id="iframe" width="100%" height="640" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+     <p>Your browser does not support iframes.</p>
+</iframe>
+
+   <iframe src="Mapa/MapaJanauba.html" id="iframe" width="100%" height="580" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+     <p>Your browser does not support iframes.</p>
+</iframe>
+   
+   
+    
+  </div>
+  
+  <div class="column side">
+  
+ <iframe src="Cursos/cursos.html" id="iframe" width="100%" height="720" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+     <p>Your browser does not support iframes.</p>
+</iframe>
+
+<p>Visitante nº:</p>
+  <a href="https://www.webfreecounter.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=gmuapxcx&nd=6&style=3" border="0" alt="visitor counter"></a>
+    
+  </div>
+</div>
+
+<div class="footer">
+  <p>Observatório COVID-19 UFVJM</p>
+</div>
+  
+</body>
+</html>
