@@ -1,428 +1,272 @@
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<title>Observatório Covid-19 UFVJM</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<<<<<<< HEAD
-=======
-  
-  
->>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
-<title>Observatório COVID-19 Norte de Minas </title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="WebPage/layout.css" type="text/css">
-<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
-  
-  <link rel="stylesheet" href="WebPage/leaflet.css"/>  
+ <link rel="stylesheet" href="Leaflet/leaflet.css"/>  
    
-  <script src="WebPage/leaflet.js"></script>
+  <script src="Leaflet/leaflet.js"></script>
 
-  <script src="WebPage/leaflet-heat.js"></script>
-<<<<<<< HEAD
+  <script src="Leaflet/leaflet-heat.js"></script>
 
 <style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+ #map{width: 620px; height: 400px;}
+  
+.justify{
+  text-align: justify;
+  text-justify: inter-word;
 }
-</style>
-=======
->>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
   
-  <style>
+    .centering {
+    text-align: center;
+    
+ }
 
-  .bottomleft {
+  
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+
+background: linear-gradient(to right, #a3d869,#a3d869 , #a3d869);
+color: #fff;
+text-align: center;
+ padding: 10px;
+<!--margin: 1em 0;-->
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+
+  padding: 5px;
+  overflow: hidden;
+  background-color: #0065a2;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+width: 50%;
+
+
+#center{text-align:center;}
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+/* Style the footer */
+.footer {
+  background-color: #cccccc;
+  padding: 10px;
+  text-align: center;
+}
+
+ul {
+list-style-type: none;
+  margin: 0;
+padding: 0;
+background-color: #a3d869;
+overflow: hidden;
+}
+
+li {
+
+display: inline;
+
+float:top;
+float:right;
+}
+
+
+li a{
+
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size:20px;
+
+}
+
+ <script>
+    window.onmessage = (e) => {
+      if (e.data.hasOwnProperty("frameHeight")) {
+        document.getElementById("iframe").style.height = `${e.data.frameHeight + 30}px`;
+      }
+    };
+
+    </script>
+
+dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
   position: absolute;
-  bottom: -300px;
-  left: 500px;
-  font-size: 18px;
-    }
-    
-        #map{width: 620px; height: 400px;}
-    </style>  
-<<<<<<< HEAD
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-<link href="tabulator/dist/css/tabulator.min.css" rel="stylesheet">
-<script type="text/javascript" src="tabulator/dist/js/tabulator.min.js"></script>
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-=======
->>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
-  
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+ 
+</style>
+
+
 </head>
+
 <body>
-<header id="header" class="clear">
-  <div id="hgroup">
-    <h1><a href="index"><img src="WebPage/images/Covid19Logo.jpg" alt="Logo" width="100"></a></h1>
-    <h2>Observatório Covid19 Norte de Minas </h2>
-  </div>
-  <nav>
-    <ul>
-<<<<<<< HEAD
-      <li><a href="news" style="font-size:150%"> Notícias </a></li>
-       <li><a href="parceiros" style="font-size:150%"> Parceiros </a></li>
-      <li><a href="about" style="font-size:150%"> Quem Somos </a></li>
-       <li class="last"><li><a href="contato" style="font-size:150%"> Contato </a></li>      
-=======
-      <li><a href="news"> Notícias </a></li>
-       <li><a href="parceiros"> Parceiros </a></li>
-      <li><a href="about"> Quem Somos </a></li>
-       <li class="last"><li><a href="contato"> Contato </a></li>      
->>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
-    </ul>
-  </nav>
-  <div class="clear"></div>
-</header>
-<!-- content -->
-<div id="container">
-  <!-- content body -->
-  <aside id="left_column">
-   <!-- <h2 class="title">Categories</h2> -->
-    <nav>
-      <ul>
-<<<<<<< HEAD
-        <li><a href="analise" style="font-size:150%"> Análise da Epidemia </a></li>
-        <li><a href="boletim" style="font-size:150%"> Boletins Epidemiológicos </a></li>
-        <li><a href="acoes" style="font-size:150%"> Nossas Ações </a></li>
-         <li class="last"><li><a href="artigos" style="font-size:150%"> Artigos Recomendados</a></li>
-      </ul>
-    </nav>
 
-   <script>
-        var links = ["index.html","index.html","index.html","index.html"];
-        var images = ["Figures/course1.jpg","Figures/course2.jpg","Figures/course3.jpg","Figures/course4.jpg"];
-		
-        var i = 0;
-        var renew = setInterval(function(){
-            if(links.length == i){
-                i = 0;
-            }
-            else {
-            document.getElementById("bannerImage").src = images[i]; 
-            document.getElementById("bannerLink").href = links[i]; 
-            i++;
+  <div class="header">
 
-        }
-        },2500);
-        </script>
+<ul>
+   <li><a href="#contact">Contato</a></li>
+  <li><a href="#news">Quem Somos</a></li>
+   <li><a href="#home">Parcerias</a></li\>
+ </ul>
+
+<div style="top: 50%; left: 50%; transform: translate(0%, -20%);">
+  <h1>Observatório COVID-19 UFVJM</h1>
+</div>
 
 
-
-   <a id="bannerLink" href="index.html" onclick="void window.open(this.href); return false;">
-   
-<img id="bannerImage" src="Figures/course1.jpg" style="width:75%" alt="Cursos Online da UFVJM">
-</a>
-    
-=======
-        <li><a href="analise"> Análise da Epidemia </a></li>
-        <li><a href="boletim"> Boletins Epidemiológicos </a></li>
-        <li><a href="acoes"> Nossas Ações </a></li>
-         <li class="last"><li><a href="artigos"> Artigos Recomendados</a></li>
-      </ul>
-    </nav>
-
-
->>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
-<div class="bottomleft">
   
-  <!-- Start of WebFreeCounter Code -->
-  <h1>Visitante nº:</h1>
-  <a href="https://www.webfreecounter.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=gmuapxcx&nd=6&style=3" border="0" alt="visitor counter"></a>
-  <p></p><p></p>
+</div>
 
+<div class="topnav">
+  <a href="#">Notícias</a>
+  <a href="#">Análises</a>
+  <a href="#">Ações</a>
+  <a href="#">Artigos</a>
+  <a href="#">Boletins Epidemiológicos</a>
+ </div>
+
+<div class="row">
+  <div class="column side">
+
+<div class="centering">
+      <h1><a href="index"><img src="Images/Covid19Logo.jpg" alt="Logo" width="200"></a></h1>
+</div>
+
+<h2>Covid-19 na Região da UFVJM</h2>
+
+<div class="centering">
+
+      <iframe src="https://www.nonlinearsolutions.com.br/table.html" width="250px" height="250px" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+   
     </div>
     
-  </aside>
-  <!-- main content -->
-  <div id="content">
-    <!-- section 1 -->
-    <section>
-      <!-- article 1 -->
-      <article>
-<<<<<<< HEAD
-        <h2 style="font-size:150%"><a>UFVJM Lança Cursos Sobre a COVID-19</a></h2>
-	<div id="justify">
-	<p style="font-size:150%"> Dentre os diversos cursos ofertados pela UFVJM, segue a relação de cursos relacionados com o observatório COVID-19 Norte de Minas:</p>
-</div>
-<div id="center">	
-<div class="w3-content w3-display-container">
-  <img class="mySlides" src="Figures/course1.jpg" style="width:75%" >
-  <img class="mySlides" src="Figures/course2.jpg" style="width:75%">
-  <img class="mySlides" src="Figures/course3.jpg" style="width:75%">
-  <img class="mySlides" src="Figures/course4.jpg" style="width:75%">
-
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
-</div>
-
-=======
-        <h2><a>Apresentação</a></h2>
-        <p>Este é um projeto de pesquisa e extensão vinculado à Universidade Federal dos Vales do Jeqtuinhonha e Mucuri. Nosso objetivo é estudar a evolução da COVID-19, especialmente na região centro-norte de Minas Gerais. </p>
->>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
-       </article>
-
-      <article>
-	<h2><a> Ação Solidária </a></h2>
-	
-<<<<<<< HEAD
-	<div id="justify">
-	  <p style="font-size:150%;">Professores da UFVJM campus Janaúba fazem vaquinha e distribuem protetores faciais para EPI em diversas cidades.</p>
-</div>
-=======
-	<p> Professores da UFVJM campus Janaúba fazem vaquinha e distribuem protetores faciais para EPI em diversas cidades.</p>
-
->>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
-	<div id="center">
-	  <video width="640" height="480" controls>
-	   < <source src="Acoes/VID-20200617-WA0045.mp4" type="video/mp4">
->
-</video>
-
-	  <p></p>
-</div>
-</article>
-
-      <!-- article 2 -->
-      <article>
-        <h2><a>Propagação do Coronavírus em Janaúba</a></h2>
-<<<<<<< HEAD
-       <div id="justify">
-	  <p style="font-size:150%;"> Mapa em escala de cores  da dispersão dos casos confirmados de coronavírus em Janaúba por bairro. </p>
-=======
-        <p> Mapa em escala de cores  da dispersão dos casos confirmados de coronavírus em Janaúba por bairro. </p>
->>>>>>> cc1e02cd39eecc1eda57c76e6abb713c3821e880
+  </div>
   
-            </article>
-         
-       
-      <div id="map"></div>
-      
-      <p> Cores: azul - poucos casos; vermelho - muitos casos. Atualizado em 21/06/2020 com dados da Secretaria Municipal de Saúde.  </p>
-      
-       <script src="WebPage/leaflet-heat.js"></script>
-
-       <script>      
-     
-      var mymap = L.map('map').setView([-15.8075, -43.3077], 13);
-   var addressPoints = [
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8075,-43.3077],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8092,-43.3106],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8092,-43.3106],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8092,-43.3106],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8092,-43.3106],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8074,-43.3047],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3115],
-      [-15.8090,-43.3003],
-      [-15.8090,-43.3003],
-      [-15.8090,-43.3003],
-      [-15.8090,-43.3003],
-      [-15.8090,-43.3003],
-      [-15.8090,-43.3003],
-      [-15.8090,-43.3003],
-      [-15.8090,-43.3003],
-      [-15.8090,-43.3003],
-      [-15.8090,-43.3003],
-      [-15.8090,-43.3003],
-      [-15.8090,-43.3003],
-      [-15.7880,-43.3228],
-      [-15.7880,-43.3228],
-      [-15.7880,-43.3228],
-      [-15.7880,-43.3228],
-      [-15.7880,-43.3228],
-      [-15.7880,-43.3228],
-      [-15.7880,-43.3228],
-      [-15.7880,-43.3228],
-      [-15.7880,-43.3228],
-      [-15.7880,-43.3228],
-      [-15.7880,-43.3228],
-      [-15.8348,-43.3056],
-      [-15.8348,-43.3056],
-      [-15.8348,-43.3056],
-      [-15.8348,-43.3056],
-      [-15.8348,-43.3056],
-      [-15.8348,-43.3056],
-      [-15.8348,-43.3056],
-      [-15.8273,-43.3113],
-      [-15.8273,-43.3113],
-      [-15.8273,-43.3113],
-      [-15.8273,-43.3113],
-      [-15.8273,-43.3113],
-      [-15.8273,-43.3113],
-      [-15.8251,-43.2949],
-      [-15.8251,-43.2949],
-      [-15.8251,-43.2949],
-      [-15.8251,-43.2949],
-      [-15.8251,-43.2949],
-      [-15.8251,-43.2949],
-      [-15.7994,-43.3272],
-      [-15.7994,-43.3272],
-      [-15.7994,-43.3272],
-      [-15.7994,-43.3272],
-      [-15.7994,-43.3272],
-      [-15.7994,-43.3272],
-      [-15.8494,-43.3043],
-      [-15.8494,-43.3043],
-      [-15.8494,-43.3043],
-      [-15.8494,-43.3043],
-      [-15.8494,-43.3043],
-      [-15.7984,-43.3125],
-      [-15.7984,-43.3125],
-      [-15.7984,-43.3125],
-      [-15.7984,-43.3125],
-      [-15.7984,-43.3125],
-      [-15.8519,-43.3046],
-      [-15.8519,-43.3046],
-      [-15.8519,-43.3046],
-      [-15.8519,-43.3046],
-      [-15.8190,-43.3126],
-      [-15.8190,-43.3126],
-      [-15.8190,-43.3126],
-      [-15.8190,-43.3126],
-      [-15.7956,-43.3205],
-      [-15.7956,-43.3205],
-      [-15.7956,-43.3205],
-      [-15.7956,-43.3205],
-      [-15.8167,-43.3058],
-      [-15.8167,-43.3058],
-      [-15.8167,-43.3058],
-      [-15.8185,-43.3150],
-      [-15.8185,-43.3150],
-      [-15.8185,-43.3150],
-      [-15.7925,-43.3081],
-      [-15.7925,-43.3081],
-      [-15.7925,-43.3081],
-      [-15.8396,-43.2999],
-      [-15.8396,-43.2999],
-      [-15.7188,-43.3274],
-      [-15.7188,-43.3274],
-      [-15.7935,-43.3060],
-      [-15.7935,-43.3060],
-      [-15.8508,-43.3233],
-      [-15.7773,-43.3210],
-      [-15.7227,-43.3094],
-      
-   ];
-      
-
-var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(mymap);
-
-addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
-
-  var heat = L.heatLayer(addressPoints,{
-        max : 1.0,
-        radius : 40, // default value
-        blur : 25, // default value
-        gradient : {0.2:'blue',0.5: 'lime', 0.8: 'yellow', 1.0: 'red'} // Values can be set for a scale of 0-1
-    }).addTo(mymap);
-
-       </script>
-       </div>
-          <!-- / content body -->
-  <div class="clear"></div>     
- 
-  
-</div>
-<!-- footer -->
-<footer id="footer">
-  <p class="fl_left"> OBSERVATÓRIO COVID-19 NORTE DE MINAS </p>
+  <div class="column middle">
     
-</footer>
+   <iframe src="Acao/acao_1.html" id="iframe" width="100%" height="640" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+     <p>Your browser does not support iframes.</p>
+</iframe>
+
+   <iframe src="Mapa/MapaJanauba.html" id="iframe" width="100%" height="580" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+     <p>Your browser does not support iframes.</p>
+</iframe>
+   
+   
+    
+  </div>
+  
+  <div class="column side">
+  
+ <iframe src="Cursos/cursos.html" id="iframe" width="100%" height="520" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+     <p>Your browser does not support iframes.</p>
+</iframe>
+
+<p>Visitante nº:</p>
+  <a href="https://www.webfreecounter.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=gmuapxcx&nd=6&style=3" border="0" alt="visitor counter"></a>
+    
+  </div>
+</div>
+
+<div class="footer">
+  <p>Observatório COVID-19 UFVJM</p>
+</div>
+  
 </body>
 </html>
