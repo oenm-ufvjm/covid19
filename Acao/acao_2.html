@@ -1,0 +1,44 @@
+
+
+  <h2><a> Alunos da UFVJM produzem mais de 1500 máscaras para combate ao coronavírus </a></h2>
+	
+	<div class="justify">
+	  <p> 1.500 máscaras de proteção facial foram produzidas pelos alunos do Campus Janaúba e entregues à Prefeitura do município. As peças serão destinadas aos usuários dos serviços da assistência social do município.</p> <br>
+	 
+</div>
+	<div style="text-align:center">
+
+  <img class="mySlides" src="acao2/acao2_1.jpg" style="width:65%;margin: auto;" >
+  <img class="mySlides" src="acao2/acao2_2.jpg" style="width:65%;margin: auto;">
+  <img class="mySlides" src="acao2/acao2_3.jpg" style="width:65%;margin: auto;">
+  <img class="mySlides" src="acao2/acao2_4.jpg" style="width:65%;margin: auto;">
+  
+  <button onclick="plusDivs(-1)">&#10094;</button>
+  <button onclick="plusDivs(1)">&#10095;</button>
+
+  <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+	  
+
+</div>
+ <p> Maiores informações: <a href="http://portal.ufvjm.edu.br/noticias/2020/coronavirus-prefeitura-de-janauba-recebe-1-500-mascaras-produzidas-por-alunos-da-ufvjm">http://portal.ufvjm.edu.br/noticias/2020/coronavirus-prefeitura-de-janauba-recebe-1-500-mascaras-produzidas-por-alunos-da-ufvjm</a>. </p>
+	  
+
+</html>

@@ -199,8 +199,8 @@ overflow: hidden;
   <div class="header">
 
 <ul>
-   <li><a href="contact.html">Contato</a></li>
-  <li><a href="about.html">Quem Somos</a></li>
+   <li><a href="/covid19/contact.html">Contato</a></li>
+  <li><a href="/covid19/about.html">Quem Somos</a></li>
    <li><a href="#home">Parcerias</a></li\>
  </ul>
 
@@ -209,32 +209,18 @@ overflow: hidden;
 </div>
 
 
-  </div>
-
-
-
-
-
   
+</div>
 
 <ul  class="bottom1" style=" background-color: #0065a2;">
-  <li class="bottom"><a href="news.html">Notícias</a></li>
-  <li class="bottom"><a href="#news">Análises</a>
-    <div class="dropdown-content">
-        <a href="Analises/Diamantina/Diamantina.html">Diamantina</a>
-        <a href="Analises/Janauba/Janauba.html">Janaúba</a>
-	<a href="Analises/MontesClaros/MontesClaros.html">Montes Claros</a>
-	<a href="Analises/Pirapora/Pirapora.html">Pirapora</a>
-	<a href="Analises/TeofiloOtoni/TeofiloOtoni.html">Teófilo Otoni</a>
-	<a href="Analises/Unai/Unai.html">Unai</a>
-           </div>
-  </li>
+  <li class="bottom"><a href="/covid19/news.html">Notícias</a></li>
+  <li class="bottom"><a href="#news">Análises</a></li>
    <li class="bottom"><a href="#news">Artigos</a></li>
   <li class="bottom">
-    <a href="boletim.html">Boletins Epidemiológicos</a>
+    <a href="/covid19/boletim.html">Boletins Epidemiológicos</a>
     <div class="dropdown-content">
-      <a href="boletim.html">CTCM - UFVJM - TO</a>
-      <a href="boletim.html">SES MG - Macrorregião Norte </a>
+      <a href="/covid19/boletim.html">CTCM - UFVJM - TO</a>
+      <a href="/covid19/boletim.html">SES MG - Macrorregião Norte </a>
      </div>
   </li>
 <li class="bottom">
@@ -253,54 +239,38 @@ overflow: hidden;
 </li>
   <li class="bottom"><a href="#home">Mapas de Calor</a>
     <div class="dropdown-content">
-      <a href="Mapa/Janauba.html">Janaúba</a>
-        <a href="Mapa/MontesClaros.html">Montes Claros</a>
-       <a href="Mapa/TeofiloOtoni.html">Teófilo Otoni</a>
+      <a href="/covid19/Mapa/Janauba.html">Janaúba</a>
+       <a href="/covid19/Mapa/TeofiloOtoni.html">Teófilo Otoni</a>
       </div>
 
   </li>
    <li class="bottom"><a href="#">Projetos</a></li>
 </ul>
 
-
-
-
-
-
-
-
 <div class="row">
   <div class="column side">
 
 <div class="centering">
-      <h1><a href="index.html"><img src="Images/Covid19Logo.jpg" alt="Logo" width="200"></a></h1>
+      <h1><a href="/covid19/index.html"><img src="/covid19/Images/Covid19Logo.jpg" alt="Logo" width="200"></a></h1>
 </div>
 
-   
+    
   </div>
   
   <div class="column middle">
 
-<iframe src="Acao/acao_2.html" id="iframe" width="100%" height="840" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+   <iframe src="MapaMontesClaros.html" id="iframe" width="100%" height="580" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
      <p>Your browser does not support iframes.</p>
-</iframe>
+   </iframe>
 
     
-   <iframe src="Acao/acao_1.html" id="iframe" width="100%" height="640" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
-     <p>Your browser does not support iframes.</p>
-</iframe>
-
-   <iframe src="Mapa/MapaJanauba.html" id="iframe" width="100%" height="580" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
-     <p>Your browser does not support iframes.</p>
-</iframe>
-   
-   
+      
     
   </div>
   
   <div class="column side">
   
-
+ 
     
   </div>
 </div>
